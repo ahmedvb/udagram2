@@ -25,7 +25,7 @@ jobs:
             echo "NPM --version" 
             NPM --version: "8.19.2"
             echo $(npm --version)
-            npm run frontend: npm frontend:install
+            npm run frontend: npm run frontend:install
       # TODO: Install dependencies in the the backend API
       - run:
           name: Install API Dependencies
