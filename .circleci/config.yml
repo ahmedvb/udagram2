@@ -19,9 +19,11 @@ jobs:
       - run:
           name: Install Front-End Dependencies
           command: |
-            echo "NODE --version" 
+            echo "NODE --version"
+            node-version: "14.15"
             echo $(node --version)
             echo "NPM --version" 
+            NPM --version: "8.19.2"
             echo $(npm --version)
             npm run frontend: npm install
       # TODO: Install dependencies in the the backend API
@@ -38,7 +40,7 @@ jobs:
       - run:
           name: Front-End Build
           command: |
-            npm run build
+            npm run frontend:install
       # TODO: Build the backend API
       - run:
           name: API Build
