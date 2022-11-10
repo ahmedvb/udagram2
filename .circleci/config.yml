@@ -20,7 +20,7 @@ jobs:
           name: Install Front-End Dependencies
           command: |
             echo "NODE --version"
-            node-version: "14.15"
+            node-version: "16.16.0"
             echo $(node --version)
             echo "NPM --version" 
             NPM --version: "8.19.2"
@@ -53,7 +53,7 @@ jobs:
       # more setup needed for aws, node, elastic beanstalk
     steps:
       - node/install:
-          node-version: "14.15"
+          node-version: "16.16.0"
       - eb/setup
       - aws-cli/setup
       - checkout
